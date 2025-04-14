@@ -11,7 +11,7 @@ spec:
   template:
     spec:
       os:
-        image: https://quay.io/repository/rciots/mm-device-image-rhel:latest
+        image: quay.io/rciots/mm-device-image-rhel:latest
       config:
         - name: motd-update
           configType: InlineConfigProviderSpec
@@ -29,7 +29,7 @@ spec:
         - name: microshift-manifests
           configType: GitConfigProviderSpec
           gitRef:  
-            repository: marblemaze-manifests
+            repository: marblesmaze-manifests
             targetRevision: main
             path: /configuration
         - name: secrets
