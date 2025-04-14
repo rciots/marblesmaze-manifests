@@ -1,0 +1,9 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: mm-cam
+  namespace: mm-cam
+data:
+  CLI_PORT: '8080'
+  VIDEO_DEVICE: 'video0'
+  CONNECTOR_SVC: 'mm-ws-connector.mm-ws-connector.svc.cluster.local'

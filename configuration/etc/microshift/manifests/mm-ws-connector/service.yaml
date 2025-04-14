@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mm-ws-connector
+  namespace: mm-ws-connector
+  labels:
+    app: mm-ws-connector
+spec:
+  selector:
+    app: mm-ws-connector
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      name: 8080-tcp

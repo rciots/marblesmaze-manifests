@@ -1,0 +1,8 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: mm-ws-connector
+  namespace: mm-ws-connector
+data:
+  PORT: '8080'
+  WS_MANAGER: ws.rciots.com
