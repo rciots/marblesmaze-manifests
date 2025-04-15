@@ -1,0 +1,30 @@
+apiVersion: v1alpha1
+kind: Fleet
+metadata:
+  name: marblesmaze-fleet2
+  labels:
+    owner: mparra
+spec:
+  selector:
+    matchLabels:
+      fleet: marblesmaze-fleet2
+  template:
+    spec:
+      os:
+        image: quay.io/rciots/mm-device-image-rhel:latest
+      config:
+        - name: motd-update
+          inline:
+            - path: "/etc/motd"
+              content: "This system is managed by flightctl."
+              mode: 0644
+        - name: microshift-manifests
+          gitRef:  
+            repository: marblesmaze-manifests
+            targetRevision: main
+            path: /configuration
+      systemd:
+        matchPatterns:
+          - "microshift.service"
+          - "crio.service"
+          - "flightctl-agent.service"
