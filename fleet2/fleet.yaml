@@ -11,7 +11,7 @@ spec:
   template:
     spec:
       os:
-        image: quay.io/rciots/mm-device-image-rhel:staging
+        image: quay.io/rciots/mm-device-image-rhel:latest
       config:
         - name: motd-update
           inline:
