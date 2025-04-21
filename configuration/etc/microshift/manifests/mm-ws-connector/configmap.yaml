@@ -5,4 +5,4 @@ metadata:
   namespace: mm-ws-connector
 data:
   PORT: '8080'
-  WS_MANAGER: ws.rciots.com
+  WS_MANAGER: socket.rciots.com
